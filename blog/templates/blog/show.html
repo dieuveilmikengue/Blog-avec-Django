@@ -1,0 +1,12 @@
+{% block title %}
+<title> {{artic.title}} </title>
+{% endblock %}
+{% block content %}
+
+<h1> {{artic.title}} </h1>
+<small> {{ artic.author.nom }} </small>
+<p>
+    {{ artic.description }}
+</p>
+
+{% endblock %}
