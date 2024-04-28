@@ -19,6 +19,7 @@ class BlogPost(models.Model):
     published = models.BooleanField(default=False)
     description = models.TextField()
     date = models.DateField(blank=True)
+    # image = models.ImageField()
 
     def __str__(self) -> str:
         return self.title
