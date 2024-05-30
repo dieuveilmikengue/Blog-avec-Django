@@ -5,46 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'blog/css/animation.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/variable.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/media_queries.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/footer.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'blog/css/boot.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'blog/css/tableau.css' %}">
     <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700;800;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  
     {% block title %}{% endblock %}
 </head>
 <body>
-    <header class="header">
-
-        <a href="http://127.0.0.1:8000/" class="logo"><span>b</span>logger</a>
-    
-        <nav class="navbar">
-            <a href="{% url 'creation' %}">Création</a>
-            <a href="#posts">my posts</a>
-            <a href="#contact">contact me</a>
-        </nav>
-    
-        <div class="icons">
-            <i class="fas fa-bars" id="menu-bars"></i>
-            <i class="fas fa-search" id="search-icon"></i>
-        </div>
-    
-        <form action="" class="search-form">
-            <input type="search" name="" placeholder="search here..." id="search-box">
-            <label for="search-box" class="fas fa-search"></label>
-        </form>
-    
-    </header>
+    {% include "blog/header.html" %}
     {% block content %}
-
+    
     {% endblock %}
-    <section class="footer">
+    {% include "blog/footer.html" %}
 
-        <div class="follow">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
-        </div>
-    
-        <div class="credit">created by <span>Coding™</span> | all rights reserved</div>
-    
-    </section>
+    <!-- <script src="{% static 'blog/js/boot.js' %}"></script>
+    <script src="{% static 'blog/js/jquery.js' %}"></script> -->
     <script src="{% static 'blog/js/script.js' %}"></script>
 </body>
 </html>

@@ -1,0 +1,49 @@
+.tableau{
+    background-color: #10182F;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    color: #f2f2f2;
+}
+
+
+th, td{
+    padding: 10px;
+    border: 1px solid #8183a7;
+    text-align: center;
+    font-size: 15px;
+}
+
+th{
+    font-weight: bold;
+}
+
+
+td a.title{
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
+td.modifier{
+    background-color: rgb(57, 57, 220);
+}
+
+td a.modifier{
+    background-color: rgb(57, 57, 220);
+    width: 100%;
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
+td.supprimer{
+    background-color: rgb(253, 49, 49);
+}
+
+td a.supprimer{
+    background-color: rgb(253, 49, 49);
+    text-decoration: none;
+    width: 100%;
+    color: #f2f2f2;
+}

@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from datetime import date
+# from ckeditor.fields import RichTextField
 
 
 # Create your models here.
@@ -18,8 +20,10 @@ class BlogPost(models.Model):
     slug = models.SlugField()
     published = models.BooleanField(default=False)
     description = models.TextField()
-    date = models.DateField(blank=True)
-    # image = models.ImageField()
+    date = models.DateField(default=date.today,blank=True)
+    image = models.ImageField(upload_to="images/", default="images/blog-1.jpg")
+    nbre_vues = models.IntegerField(default=0)
+
 
     def __str__(self) -> str:
         return self.title

@@ -17,12 +17,11 @@
 
 
 <section class="container" id="posts">
-
     <div class="posts-container">
 
         {% for liste in post %}
         <div class="post">
-            <!-- <img src="images/blog-1.jpg" alt="" class="image"> -->
+            <img src="{{ liste.image.url }}" alt="Image de l'article" class="image">
             <div class="date">
                 <i class="far fa-clock"></i>
                 <span>{{ liste.date }}</span>
@@ -46,75 +45,8 @@
         {% endfor %}
 
     </div>
-
-    <div class="sidebar">
-
-        <div class="box">
-            <h3 class="title">Auteur du site</h3>
-            <div class="about">
-                <img src="blog/images/user.png" alt="">
-                <h3>Mike Lebake</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, officia.</p>
-                <div class="follow">
-                    <a href="#" class="fab fa-facebook-f"></a>
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-instagram"></a>
-                    <a href="#" class="fab fa-linkedin"></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <h3 class="title">Categories {{ catego.count }}</h3>
-            <div class="category">
-                {% for list in catego %}
-                <a href="#"> {{ list.name }} <span>{{ list.blogpost_set.count }}</span></a>
-                {% endfor %}
-            </div>
-        </div>
-
-        <div class="box">
-            <h3 class="title">popular posts</h3>
-            <div class="p-post">
-                <a href="#">
-                    <h3>01. blog title goes here</h3>
-                    <span><i class="far fa-clock"></i>1st may, 2021</span>
-                </a>
-                <a href="#">
-                    <h3>02. blog title goes here</h3>
-                    <span><i class="far fa-clock"></i>1st may, 2021</span>
-                </a>
-                <a href="#">
-                    <h3>03. blog title goes here</h3>
-                    <span><i class="far fa-clock"></i>1st may, 2021</span>
-                </a>
-                <a href="#">
-                    <h3>04. blog title goes here</h3>
-                    <span><i class="far fa-clock"></i>1st may, 2021</span>
-                </a>
-            </div>
-        </div>
-
-        <div class="box">
-            <h3 class="title">popular tags</h3>
-            <div class="tags">
-                <a href="#">travel</a>
-                <a href="#">photo</a>
-                <a href="#">science</a>
-                <a href="#">biology</a>
-                <a href="#">aliens</a>
-                <a href="#">nature</a>
-                <a href="#">mountain</a>
-                <a href="#">river</a>
-                <a href="#">camp</a>
-                <a href="#">landscape</a>
-                <a href="#">world</a>
-            </div>
-        </div>
-
-    </div>
-
 </section>
+
 
 
 {% endblock %}

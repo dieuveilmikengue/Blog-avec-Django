@@ -1,0 +1,41 @@
+<section class="blog" id="blog">
+
+    <div class="blog-grid">
+    {% for liste in post %}
+
+      <div class="blog-card">
+
+        <div class="blog-banner-box">
+          <img src="./assets/images/blog-1.jpg" alt="blog banner">
+        </div>
+
+        <div class="blog-content">
+
+          <h3 class="blog-title">
+            <a href="{% url 'show' liste.slug %}">{{ liste.title }}</a>
+          </h3>
+
+          <div class="wrapper">
+
+            <div class="blog-publish-date">
+              <img src="./assets/images/calendar.png" alt="calendar icon">
+
+              <a href="#">{{ liste.date }}</a>
+            </div>
+
+            <div class="blog-comment">
+              <img src="./assets/images/comment.png" alt="comment icon">
+              <i class="far fa-comment"></i>
+              <a href="#">3 Comments</a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      {% endfor %}
+
+    </div>
+
+</section>

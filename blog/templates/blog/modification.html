@@ -1,0 +1,21 @@
+{% extends "blog/base.html" %}
+{% block title %}
+<title>Modifier l'article</title>
+{% endblock %}
+{% block content %}
+<section class="banner" id="banner">
+
+    <div class="content">
+        <h3>MODIFIER L'ARTICLE</h3>
+        <p>Les nouvelles Technologies</p>
+    </div>
+</section>
+<section class="fome">
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+    </form>
+</section>
+
+{% endblock %}

@@ -3,18 +3,18 @@
 <title>Creation Article</title>
 {% endblock %}
 {% block content %}
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<form action="" method="post">
+<section class="banner" id="banner">
+
+    <div class="content">
+        <h3>CREATION L'ARTICLE</h3>
+        <p>Les nouvelles Technologies</p>
+    </div>
+</section>
+<form action="" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Envoyer">
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Envoyer</button>
 </form>
-<h2> {{msg}} </h2>
+<h2> {{ msg }} </h2>
 
 {% endblock %}

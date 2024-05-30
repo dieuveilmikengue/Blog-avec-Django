@@ -1,0 +1,45 @@
+{% extends "blog/base.html" %}
+{% block title %}
+<title>Gerer les articles</title>
+{% endblock %}
+{% block content %}
+
+
+<section class="banner" id="banner">
+
+    <div class="content">
+        <h3>GERER LES ARTICLES</h3>
+        <h3>{{message}}</h3>
+        <p>Les nouvelles Technologies</p>
+    </div>
+
+</section>
+
+<section class="tableau">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Titre de l'article</th>
+            <th scope="col">Auteur</th>
+            <th scope="col">Date de Pub</th>
+            <th scope="col">Nombre des vues</th>
+            <th scope="col">Modifier</th>
+            <th scope="col">Supprimer</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for liste in post %}
+          <tr>
+            <td><a href="{% url 'show' liste.slug %}" class="title">{{ liste.title }}</a></td>
+            <td>{{ liste.author }}</td>
+            <td>{{ liste.date }}</td>
+            <td>{{ liste.nbre_vues }}</td>
+            <td class="modifier"><a href="{% url 'modification' liste.slug %}" class="modifier">Modifier</a></td>
+            <td class="supprimer"><a href="{% url 'supprime' liste.slug %}" class="supprimer">Supprimer</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</section>
+
+{% endblock %}
