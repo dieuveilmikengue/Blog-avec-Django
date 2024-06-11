@@ -16,7 +16,7 @@
 }
 
 html{
-    font-size: 62.5%;
+    font-size: 70%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -379,7 +379,7 @@ section{
 }
 
 
-.contact{
+/* .contact{
     background:url(../images/contact-bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -422,55 +422,7 @@ section{
 
 .contact form .inputBox input{
     width:49%;
-}
-
-.footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer .credit{
-    text-transform: capitalize;
-    font-size: 2rem;
-    color:var(--black);
-    padding: 1rem 0;
-}
-
-.footer .credit span{
-    color:var(--orange);
-}
-
-.footer .follow{
-    padding: 1rem 0;
-}
-
-.footer .follow a{
-    height:4.5rem;
-    line-height:4.5rem;
-    width:4.5rem;
-    border-radius: 50%;
-    font-size: 1.7rem;
-    background:var(--black);
-    color:#fff;
-    margin:0 .1rem;
-    text-align: center;
-}
-
-.footer .follow a:hover{
-    background:var(--orange);
-}
-
-
-
-
-
-
-
-
-
-
-
+} */
 
 
 /* media queries  */
@@ -537,11 +489,6 @@ section{
 
     .container .posts-container .post .image{
         height: 30rem;;
-    }
-
-    .footer{
-        flex-flow: column;
-        text-align: center;
     }
 
 }

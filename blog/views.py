@@ -17,7 +17,7 @@ def index(request):
                 }
     except:
         context = {
-                    "message": "La page que vous cherchez n'existe"
+                    "message": "La page que vous cherchez n'existe pas"
                     }
     return render(request, "blog/index.html", context)
 
@@ -29,7 +29,7 @@ def managearticle(request):
                 }
     except:
         context = {
-                    "message": "La page que vous cherchez n'existe"
+                    "message": "La page que vous cherchez n'existe pas"
                     }
     return render(request, "blog/managearticle.html", context)
 
